@@ -1,0 +1,54 @@
+name: 🎁 Request a Font
+description: Suggest an open-source or cultural heritage font to be added to the archives
+title: "[Font Request]: "
+labels: ["font-request", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Thank you for suggesting a typeface to the Open Typography Archives!
+        Please fill out this form so our curation team can review its license, character set, and format.
+  - type: input
+    id: font-name
+    attributes:
+      label: Font Family Name
+      description: What is the exact name of the font family?
+      placeholder: e.g. "Siliguri Sans", "Amiri Nastaliq"
+    validations:
+      required: true
+  - type: dropdown
+    id: script
+    attributes:
+      label: Primary Writing System / Script
+      description: Which language or script does this font support?
+      options:
+        - Bengali (বাংলা)
+        - English / Latin
+        - Arabic / Islamic (العربية)
+        - Hindi / Devanagari (हिन्दी)
+        - German / Blackletter (Fraktur)
+        - Icons / Vector Symbols
+        - Other Multi-Script
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: License Information
+      description: Is it open-source (SIL OFL 1.1, Apache 2.0, CC0, GPL)?
+      placeholder: e.g. "SIL Open Font License 1.1"
+    validations:
+      required: true
+  - type: input
+    id: source-url
+    attributes:
+      label: Official Source or Designer Link
+      description: Where can the font or its designer be verified?
+      placeholder: e.g. "https://github.com/... or https://fonts.google.com/..."
+    validations:
+      required: true
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional Notes & Sample Text
+      description: Any historical context, designer credits, or specimen text.

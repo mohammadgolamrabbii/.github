@@ -1,0 +1,43 @@
+name: 🐛 Report Broken Font / Missing Glyphs
+description: Report an issue with missing characters, bad contours, or rendering glitches in a font
+title: "[Font Bug]: "
+labels: ["bug", "font-quality"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Thanks for reporting a font bug!
+        Help us maintain clean, professional typography for the global open-source community.
+  - type: input
+    id: font-filename
+    attributes:
+      label: Font File or Family Name
+      description: Which font file or collection did you find the issue in?
+      placeholder: e.g. "SolaimanLipi.ttf in Bangla-Fonts-Mega-Collection"
+    validations:
+      required: true
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Operating System / Environment
+      options:
+        - Linux (Ubuntu/Debian)
+        - Linux (Arch/Fedora/Alpine)
+        - Windows 10 / 11
+        - macOS
+        - Web Browser (Chrome/Firefox/Safari)
+        - Mobile (Android/iOS)
+    validations:
+      required: true
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Description of the Glitch
+      description: What happens? Are glyphs overlapping, missing, or displaying wrong unicode conjuncts?
+    validations:
+      required: true
+  - type: input
+    id: sample-text
+    attributes:
+      label: Sample Problematic Text / Unicode String
+      description: Paste the exact string or characters that trigger the glitch.
